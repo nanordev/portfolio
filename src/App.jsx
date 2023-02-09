@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Outlet } from 'react-router-dom'
 import { Home } from './Home';
-import { Projects } from './Projects';
+import { Portfolio } from './Portfolio';
 import { Navbar } from './Navbar';
 import { Topbar } from './Topbar';
 
 function App() {
   return (
-    <div className="App w-full h-screen bg-slate-50">
+    <div className="App w-full select-none relative">
       <div className='wrapper container w-full h-full flex'>
-
         <nav className='fixed h-full w-32'>
         <Navbar />
         </nav>
 
-        <main className='ml-40 mr-0 w-full'>
-          <nav className='w-full mb-8'>
+        <main className='ml-40 w-full sticky top-0'>
+          <nav className='w-full mb-14 sticky top-0 z-10 bg-white'>
           <Topbar />
           </nav>
           <Home />
@@ -31,7 +29,7 @@ export const RoutesFunc = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/portfolio" element={<Projects />} />
+      <Route path="/portfolio" element={<Portfolio />} />
     </Routes>
   )
 }
