@@ -2,68 +2,14 @@ import React from 'react'
 
 export const Home = () => {
   const image = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-  const twitter_logo = "https://th.bing.com/th/id/R.3d74e8bfd4ef7985f7529bb9f7650eca?rik=RCvdo0dDvjxCWg&riu=http%3a%2f%2fwww.stickpng.com%2fassets%2fimages%2f580b57fcd9996e24bc43c53e.png&ehk=%2fkYf7%2bIY6TUkpUQzwclpivMLQ8ynEgcZYehDGOzbu0E%3d&risl=&pid=ImgRaw&r=0"
-  const linkedin_logo = "https://th.bing.com/th/id/R.d51da72e1f4675ba5aef9c956ed4c562?rik=dDahhQdCwoAv3w&pid=ImgRaw&r=0"
-  const github_logo = "https://logodix.com/logo/1205247.png"
+
   return (
-    <main className='grid grid-cols-3 w-full gap-10 pb-40 relative'>
 
-      <section className='posts-section w-full flex flex-col gap-24 col-span-2'>
-        <Intro image={image} />
-        <About image={image} />
-        <Skills image={image} />
-        <Projects image={image} />
-      </section>
-
-      <aside className='aside w-full col-span-1 flex flex-col gap-10 sticky top-0 bottom-0 h-screen'>
-
-        <FeaturedArticles image={image} />
-
-        <Socials github_logo={github_logo} twitter_logo={twitter_logo} linkedin_logo={linkedin_logo} />
-
-      </aside>
-    </main>
-  )
-}
-
-export const Socials = ({ linkedin_logo, twitter_logo, github_logo }) => {
-  return (
-    <section>
-      <p className='font-semibold mb-3 px-4'>Socials</p>
-      <div className='w-full flex justify-between'>
-
-        <article className='flex flex-col py-4 px-2  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
-          <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
-            <img src={linkedin_logo} alt="" />
-          </div>
-          <p className='font-semibold text-xs text-slate-600'>Linkedin</p>
-
-          <button className='flex items-center bg-white rounded-full px-4 py-1 text-xs  cursor-pointer'>
-            <p className='whitespace-nowrap font-semibold'>Follow Me</p>
-          </button>
-        </article>
-        <article className='flex flex-col py-4 px-2  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
-          <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
-            <img src={twitter_logo} alt="" />
-          </div>
-          <p className='font-semibold text-xs text-slate-600'>Twitter</p>
-
-          <button className='flex items-center bg-white rounded-full px-4 py-1 text-xs  cursor-pointer'>
-            <p className='whitespace-nowrap font-semibold'>Follow Me</p>
-          </button>
-        </article>
-        <article className='flex flex-col py-4 px-2  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
-          <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
-            <img src={github_logo} alt="" />
-          </div>
-          <p className='font-semibold text-xs text-slate-600'>Github</p>
-
-          <button className='flex items-center bg-white rounded-full px-4 py-1 text-xs  cursor-pointer'>
-            <p className='whitespace-nowrap font-semibold'>Follow Me</p>
-          </button>
-        </article>
-
-      </div>
+    <section className='posts-section w-full flex flex-col gap-24 col-span-2'>
+      <Intro image={image} />
+      <About image={image} />
+      <Skills image={image} />
+      <Projects image={image} />
     </section>
   )
 }
@@ -102,7 +48,6 @@ export const Intro = ({ image }) => {
   )
 }
 
-
 export const About = ({ image }) => {
   return (
 
@@ -138,7 +83,6 @@ export const About = ({ image }) => {
     </article>
   )
 }
-
 
 export const Skills = ({ image }) => {
   return (
@@ -210,12 +154,10 @@ export const Skills = ({ image }) => {
   )
 }
 
-
 export const Projects = ({ image }) => {
   return (
 
     <article className='bg-zinc-100 rounded-2xl overflow-hidden shadow-sm px-4 py-8'>
-
       <div className="top flex items-center gap-2">
         <div className="avatar rounded-full w-12 h-12 shrink-0 bg-insta-new-gradient flex items-center justify-center">
           <div className="overflow-hidden rounded-full w-11 h-11 shrink-0 bg-white flex items-center justify-center">
@@ -232,15 +174,15 @@ export const Projects = ({ image }) => {
 
       <p className='text-lg font-semibold my-4 float-right'>Highlighted Projects</p>
 
-      <div className=" w-full grid grid-cols-3 gap-6 mt-5">
-        <ProjectCard image = {image} />
-        <ProjectCard image = {image} />
-        <ProjectCard image = {image} />
+      <div className=" w-full grid grid-cols-3 gap-2 mt-5">
+        <ProjectCard image={image} />
+        <ProjectCard image={image} />
+        <ProjectCard image={image} />
         <div className='flex justify-center items-center col-span-3 mt-2'>
           <button className='flex border-b-2 text-xs text-blue-800'>View More</button>
 
         </div>
-       
+
       </div>
 
     </article>
@@ -250,72 +192,23 @@ export const Projects = ({ image }) => {
 export const ProjectCard = ({ image }) => {
   return (
     <div className='col-span-1 rounded-3xl w-full h-64 overflow-hidden relative'>
-          <img src={image} alt="Sample Project" />
+      <img src={image} alt="Sample Project" />
 
-          <div className='peer z-10 absolute inset-0 text-white opacity-0 hover:opacity-100 flex flex-col items-center justify-center transition-all duration-400'>
-            <p className='text-xl font-semibold opacity-100'>Morning Dew</p>
-            <p className='text-sm mb-6 font-light'>Eccormerce App</p>
+      <div className='peer z-10 absolute inset-0 text-white opacity-0 hover:opacity-100 flex flex-col items-center justify-center transition-all duration-500'>
+        <p className='text-xl font-semibold opacity-100'>Morning Dew</p>
+        <p className='text-sm mb-6 font-light'>Ecormerce App</p>
 
-            <button className='text-sm rounded-full bg-white px-4 py-1 text-black hover:bg-rose-800 hover:duration-150  transition duration-400 hover:text-white'>View Details</button>
-          </div>
-
-          <div className="peer absolute inset-0 bg-black opacity-0 peer-hover:opacity-50 transition-all duration-400"></div>
-
-        </div>
-  )
-}
-
-
-
-
-
-
-
-
-
-export const FeaturedArticles = ({ image }) => {
-  return (
-
-    <section>
-      <p className='font-semibold mb-3 px-4'>Featured Articles</p>
-      <div className='w-full bg-zinc-100 rounded-2xl overflow-hidden shadow-sm p-4 flex flex-col gap-6'>
-
-        <article className='flex gap-4 items-center'>
-          <div className="rounded-2xl overflow-hidden w-24 h-20 shrink-0">
-            <img src={image} alt="" />
-          </div>
-          <div className='text-sm'>
-            <p>Meet Michael Amponsah, the graduate making waves in Ghana at age 22</p>
-            <button className='flex items-center text-slate-500 cursor-pointer'>
-              <span>Read More</span>
-              <span className="material-symbols-outlined">
-                chevron_right
-              </span>
-            </button>
-          </div>
-        </article>
-
-        <article className='flex gap-4 items-center'>
-          <div className="rounded-2xl overflow-hidden w-24 h-20 shrink-0">
-            <img src={image} alt="" />
-          </div>
-          <div className='text-sm'>
-            <p>Meet Michael Amponsah, the graduate making waves in Ghana at age 22</p>
-            <button className='flex items-center text-slate-500 cursor-pointer'>
-              <span>Read More</span>
-              <span className="material-symbols-outlined">
-                chevron_right
-              </span>
-            </button>
-          </div>
-        </article>
-
-
-
+        <button className='text-sm rounded-full bg-white px-4 py-1 text-black hover:bg-rose-800 hover:duration-150  transition duration-500 hover:text-white'>View Details</button>
       </div>
-    </section>
+
+      <div className="absolute inset-0 bg-black opacity-0 peer-hover:opacity-50 transition-all duration-500"></div>
+
+    </div>
   )
 }
+
+
+
 
 
 
