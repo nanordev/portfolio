@@ -17,7 +17,7 @@ function App() {
         </nav>
 
         <main className='ml-40 mr-0 w-full'>
-          <nav className='w-full'>
+          <nav className='w-full mb-8'>
           <Topbar />
           </nav>
           <Home />
