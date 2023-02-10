@@ -17,17 +17,17 @@ export const Navbar = () => {
                 </span>
             </Link>
                     
-            <Link to={"/je-sais-pas"} className='w-20 h-20 rounded-full bg-insta-new-gradient text-white flex justify-center items-center my-2'>
+            <div className='w-20 h-20 rounded-full bg-insta-new-gradient text-white flex justify-center items-center my-2'>
                 <span className="material-symbols-outlined">
                     receipt_long
                 </span>
-            </Link>
+            </div>
                     
-            <Link to={"contact"} className='w-20 h-20 rounded-full bg-insta-new-gradient text-white flex justify-center items-center my-2'>
+            <div className='w-20 h-20 rounded-full bg-insta-new-gradient text-white flex justify-center items-center my-2'>
                 <span className="material-symbols-outlined">
                     mail
                 </span>
-            </Link>
+            </div>
                     
            
         </nav>

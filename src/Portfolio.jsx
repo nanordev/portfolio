@@ -4,7 +4,24 @@ export const Portfolio = () => {
   const image = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
 
   return (
-    <section className='w-full col-span-2'>
+    <section className='w-full'>
+
+    <div>
+      <p className='mb-3 font-semibold'>Testimonials</p>
+    <div className='mb-14 flex items-center justify-between overflow-hidden'>
+      <Avatar image={image} />
+      <Avatar image={image} />
+      <Avatar image={image} />
+      <Avatar image={image} />
+      <Avatar image={image} />
+      <Avatar image={image} />
+      <Avatar image={image} />
+      <Avatar image={image} />
+      <Avatar image={image} />
+      <Avatar image={image} />
+    </div>
+    </div>
+
       <p className='font-semibold text-xl mb-2'>Portfolio Projects</p>
       <div className='w-full grid grid-cols-12 gap-2'>
 
@@ -21,7 +38,7 @@ export const Portfolio = () => {
 export const CardX5 = ({ image }) => {
   return (
     <div className='col-span-5 rounded-3xl w-full h-64 overflow-hidden relative'>
-          <img src={image} alt="Sample Project" />
+          <img src={image} alt="Sample Project" className='w-full h-full object-cover' />
 
           <div className='peer z-10 absolute inset-0 text-white opacity-0 hover:opacity-100 flex flex-col items-center justify-center transition-all duration-400'>
             <p className='text-xl font-semibold opacity-100'>Morning Dew</p>
@@ -38,7 +55,7 @@ export const CardX5 = ({ image }) => {
 export const CardX4 = ({ image }) => {
   return (
     <div className='col-span-4 rounded-3xl w-full h-64 overflow-hidden relative'>
-          <img src={image} alt="Sample Project" />
+          <img src={image} alt="Sample Project" className='w-full h-full object-cover' />
 
           <div className='peer z-10 absolute inset-0 text-white opacity-0 hover:opacity-100 flex flex-col items-center justify-center transition-all duration-400'>
             <p className='text-xl font-semibold opacity-100'>Morning Dew</p>
@@ -55,7 +72,7 @@ export const CardX4 = ({ image }) => {
 export const CardX3 = ({ image }) => {
   return (
     <div className='col-span-3 rounded-3xl w-full h-64 overflow-hidden relative'>
-          <img src={image} alt="Sample Project" />
+          <img src={image} alt="Sample Project" className='w-full h-full object-cover' />
 
           <div className='peer z-10 absolute inset-0 text-white opacity-0 hover:opacity-100 flex flex-col items-center justify-center transition-all duration-400'>
             <p className='text-xl font-semibold opacity-100'>Morning Dew</p>
@@ -105,5 +122,18 @@ export const MixedRow2 = ({ image }) => {
       <CardX5 image={image} />
       <CardX3 image={image} />
     </>
+  )
+}
+
+
+export const Avatar = ({ image }) => {
+  return (
+    <div className="avatar rounded-full w-16 h-16 shrink-0 bg-insta-new-gradient flex items-center justify-center cursor-pointer">
+            <div className="overflow-hidden rounded-full white-circle shrink-0 bg-white flex items-center justify-center">
+              <div className="image-wrapper overflow-hidden w-14 h-14 w rounded-full object-cover">
+                <img src={image} alt="profile of Michael Amponsah" />
+              </div>
+            </div>
+          </div>
   )
 }

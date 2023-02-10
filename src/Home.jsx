@@ -5,7 +5,7 @@ export const Home = () => {
 
   return (
 
-    <section className='posts-section w-full flex flex-col gap-24 col-span-2'>
+    <section className='posts-section w-full flex flex-col gap-24'>
       <Intro image={image} />
       <About image={image} />
       <Skills image={image} />
@@ -35,7 +35,7 @@ export const Intro = ({ image }) => {
       </div>
 
       <div className="image w-full h-96 overflow-hidden object-center object-cover relative">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="profile of Michael Amponsah" />
+        <img src={image} alt="profile of Michael Amponsah" className='w-full h-full object-cover' />
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className='absolute inset-0 text-white flex flex-col items-center justify-center'>
 
@@ -77,7 +77,7 @@ export const About = ({ image }) => {
       </div>
 
       <div className="image w-full h-96 rounded-2xl overflow-hidden object-center object-cover col-span-3">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="profile of Michael Amponsah" />
+        <img src={image} alt="profile of Michael Amponsah" className='w-full h-full object-cover' />
       </div>
 
     </article>
@@ -90,7 +90,7 @@ export const Skills = ({ image }) => {
     <article className='bg-zinc-100 rounded-2xl overflow-hidden shadow-sm grid grid-cols-3 items-center p-8 gap-8'>
 
       <div className="image w-full h-auto rounded-2xl overflow-hidden object-center object-cover col-span-1">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80" alt="profile of Michael Amponsah" />
+        <img src={image} alt="profile of Michael Amponsah" />
       </div>
 
       <div className='col-span-2 text-justify'>
@@ -98,7 +98,7 @@ export const Skills = ({ image }) => {
           <div className="avatar rounded-full w-12 h-12 shrink-0 bg-insta-new-gradient flex items-center justify-center">
             <div className="overflow-hidden rounded-full w-11 h-11 shrink-0 bg-white flex items-center justify-center">
               <div className="image-wrapper overflow-hidden w-10 h-10 rounded-full object-cover">
-                <img src={image} alt="profile of Michael Amponsah" />
+                <img src={image} alt="profile of Michael Amponsah" className='w-full h-full object-cover' />
               </div>
             </div>
           </div>
@@ -115,34 +115,34 @@ export const Skills = ({ image }) => {
 
         <div className="mt-5 grid grid-cols-3 w-full gap-4">
 
-          <div className="w-full rounded-full flex items-center justify-center bg-orange-400 text-white stack-item py-2 col-span-2">
+          <div className="w-full rounded-full flex items-center justify-center bg-orange-400 text-white stack-item py-1 col-span-2">
             <p>HTML</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-pink-400 text-white stack-item py-2 col-span-1">
+          <div className="w-full rounded-full flex items-center justify-center bg-pink-400 text-white stack-item py-1 col-span-1">
             <p>CSS</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-purple-400 text-white stack-item py-2 col-span-1">
+          <div className="w-full rounded-full flex items-center justify-center bg-purple-400 text-white stack-item py-1 col-span-1">
             <p>PHP</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-yellow-400 text-white stack-item py-2 col-span-2">
+          <div className="w-full rounded-full flex items-center justify-center bg-yellow-400 text-white stack-item py-1 col-span-2">
             <p>Javascript</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-blue-300 text-white stack-item py-2 col-span-2">
+          <div className="w-full rounded-full flex items-center justify-center bg-blue-300 text-white stack-item py-1 col-span-2">
             <p>React</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-red-500 text-white stack-item py-2 col-span-1">
+          <div className="w-full rounded-full flex items-center justify-center bg-red-500 text-white stack-item py-1 col-span-1">
             <p>Angular</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-green-500 text-white stack-item py-2 col-span-1">
+          <div className="w-full rounded-full flex items-center justify-center bg-green-500 text-white stack-item py-1 col-span-1">
             <p>nodeJS</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-blue-400 text-white stack-item py-2 col-span-2">
+          <div className="w-full rounded-full flex items-center justify-center bg-blue-400 text-white stack-item py-1 col-span-2">
             <p>Flutter</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-blue-600 text-white stack-item py-2 col-span-2">
+          <div className="w-full rounded-full flex items-center justify-center bg-blue-600 text-white stack-item py-1 col-span-2">
             <p>TypeScript</p>
           </div>
-          <div className="w-full rounded-full flex items-center justify-center bg-green-800 text-white stack-item py-2 col-span-1">
+          <div className="w-full rounded-full flex items-center justify-center bg-green-800 text-white stack-item py-1 col-span-1">
             <p>MongoDB</p>
           </div>
 
@@ -192,7 +192,7 @@ export const Projects = ({ image }) => {
 export const ProjectCard = ({ image }) => {
   return (
     <div className='col-span-1 rounded-3xl w-full h-64 overflow-hidden relative'>
-      <img src={image} alt="Sample Project" />
+      <img src={image} alt="Sample Project" className='w-full h-full object-cover' />
 
       <div className='peer z-10 absolute inset-0 text-white opacity-0 hover:opacity-100 flex flex-col items-center justify-center transition-all duration-500'>
         <p className='text-xl font-semibold opacity-100'>Morning Dew</p>

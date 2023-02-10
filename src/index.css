@@ -18,6 +18,11 @@ code {
     monospace;
 }
 
+.white-circle {
+  width: 60px;
+  height: 60px;
+}
+
 .logo-txt {
   font-family: 'Pacifico', cursive;
 }

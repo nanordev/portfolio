@@ -9,7 +9,7 @@ export const Aside = () => {
 
 
     return (
-        <aside className='aside w-full col-span-1 flex flex-col gap-10 sticky top-0 bottom-0 h-screen'>
+        <aside className='aside w-full col-span-3 flex flex-col gap-10 sticky top-0 bottom-0 h-screen'>
 
             <FeaturedArticles image={image} />
 
@@ -30,7 +30,7 @@ export const FeaturedArticles = ({ image }) => {
                     <div className="rounded-2xl overflow-hidden w-24 h-20 shrink-0">
                         <img src={image} alt="" />
                     </div>
-                    <div className='text-sm'>
+                    <div className='text-xs'>
                         <p>Meet Michael Amponsah, the graduate making waves in Ghana at age 22</p>
                         <button className='flex items-center text-slate-500 cursor-pointer'>
                             <span>Read More</span>
@@ -45,7 +45,7 @@ export const FeaturedArticles = ({ image }) => {
                     <div className="rounded-2xl overflow-hidden w-24 h-20 shrink-0">
                         <img src={image} alt="" />
                     </div>
-                    <div className='text-sm'>
+                    <div className='text-xs'>
                         <p>Meet Michael Amponsah, the graduate making waves in Ghana at age 22</p>
                         <button className='flex items-center text-slate-500 cursor-pointer'>
                             <span>Read More</span>
@@ -67,9 +67,9 @@ export const Socials = ({ linkedin_logo, twitter_logo, github_logo }) => {
     return (
         <section>
             <p className='font-semibold mb-3 px-4'>Socials</p>
-            <div className='w-full flex justify-between'>
+            <div className='w-full flex justify-center gap-1 flex-wrap'>
 
-                <article className='flex flex-col py-4 px-2  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
+                <article className='flex flex-col py-4 px-1  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
                     <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
                         <img src={linkedin_logo} alt="" />
                     </div>
@@ -79,7 +79,7 @@ export const Socials = ({ linkedin_logo, twitter_logo, github_logo }) => {
                         <p className='whitespace-nowrap font-semibold'>Follow Me</p>
                     </button>
                 </article>
-                <article className='flex flex-col py-4 px-2  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
+                <article className='flex flex-col py-4 px-1  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
                     <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
                         <img src={twitter_logo} alt="" />
                     </div>
@@ -89,7 +89,7 @@ export const Socials = ({ linkedin_logo, twitter_logo, github_logo }) => {
                         <p className='whitespace-nowrap font-semibold'>Follow Me</p>
                     </button>
                 </article>
-                <article className='flex flex-col py-4 px-2  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
+                <article className='flex flex-col py-4 px-1  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
                     <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
                         <img src={github_logo} alt="" />
                     </div>
