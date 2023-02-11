@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 
 import { Routes, Route, Outlet } from 'react-router-dom'
@@ -8,7 +9,7 @@ import { Topbar } from './Topbar';
 import { Aside } from './Aside';
 import { ProjectModal } from './ProjectModal';
 
-export const Dashboard = () => {
+export const Dashboard = ({ showProjectModal, setShowProjectModal }) => {
 
   return (
     <div className="App w-full select-none relative">
@@ -17,14 +18,13 @@ export const Dashboard = () => {
           <Navbar />
         </nav>
 
-        <ProjectModal />
+        { showProjectModal && <ProjectModal setShowProjectModal={setShowProjectModal} /> }
 
         <div className='ml-40 w-full sticky top-0'>
 
           <nav className='w-full mb-14 sticky top-0 z-40 bg-white'>
             <Topbar />
           </nav>
-
 
           <main className='grid grid-cols-10 w-full gap-10 pb-40 relative'>
 
@@ -41,12 +41,14 @@ export const Dashboard = () => {
 }
 
 function App() {
+  const [showProjectModal, setShowProjectModal ] = useState(true)
+
   return (
     <Routes>
-      <Route path="/" element={<Dashboard />}>
-        <Route path="" element={<Home />} />
-        <Route path="home" element={<Home />} />
-        <Route path="portfolio" element={<Portfolio />} />
+      <Route path="/" element={<Dashboard showProjectModal={showProjectModal} setShowProjectModal={setShowProjectModal} />}>
+        <Route path="" element={<Home setShowProjectModal={setShowProjectModal}  />} />
+        <Route path="home" element={<Home setShowProjectModal={setShowProjectModal}  />} />
+        <Route path="portfolio" element={<Portfolio setShowProjectModal={setShowProjectModal}  />} />
         {/* <Route path='*' element={<Home />} /> */}
       </Route>
     </Routes>

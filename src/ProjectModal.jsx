@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-export const ProjectModal = () => {
+export const ProjectModal = ({ setShowProjectModal }) => {
 
     const slides = [
         "https://images.unsplash.com/photo-1597239450996-ea7c2c564412?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
@@ -15,7 +15,7 @@ export const ProjectModal = () => {
             <section className='fixed inset-0 bg-black opacity-25 z-50'></section>
             <section className='fixed inset-0 flex items-center justify-center z-50'>
                 <div className='w-4/5 h-5/6 bg-white rounded-3xl p-8 relative'>
-                    <span className="material-symbols-outlined absolute top-3 right-3 cursor-pointer hover:rotate-45 duration-100">
+                    <span className="material-symbols-outlined absolute top-3 right-3 cursor-pointer hover:rotate-45 duration-100"onClick={() => setShowProjectModal(false)}>
                         close
                     </span>
 
