@@ -11,9 +11,9 @@ export const Portfolio = ({setShowProjectModal}) => {
 ]
 
   return (
-    <section className='w-full'>
+    <section className='w-full mt-20'>
 
-    <div>
+    {/* <div>
       <p className='mb-3 font-semibold'>Testimonials</p>
     <div className='mb-14 flex items-center justify-between overflow-hidden'>
       <Avatar image={image} />
@@ -27,9 +27,9 @@ export const Portfolio = ({setShowProjectModal}) => {
       <Avatar image={image} />
       <Avatar image={image} />
     </div>
-    </div>
+    </div> */}
 
-      <p className='font-semibold text-xl mb-2'>Portfolio Projects</p>
+      {/* <p className='font-semibold text-xl mb-2'>Portfolio Projects</p> */}
       <div className='w-full grid grid-cols-12 gap-2'>
 
         <DescRow slides={slides} setShowProjectModal={setShowProjectModal}  />

@@ -1,4 +1,5 @@
 import React from "react"
+import { Testimonials } from "./Testimonials"
 
 export const Aside = () => {
 
@@ -10,6 +11,8 @@ export const Aside = () => {
 
     return (
         <aside className='aside w-full col-span-3 flex flex-col gap-10 sticky top-0 bottom-0 h-screen'>
+
+            <Testimonials />
 
             <FeaturedArticles image={image} />
 

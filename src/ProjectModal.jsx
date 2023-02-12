@@ -1,15 +1,24 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
+import { projects } from './data'
+
 export const ProjectModal = ({ setShowProjectModal }) => {
 
-    const slides = [
-        "https://images.unsplash.com/photo-1597239450996-ea7c2c564412?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        "https://images.unsplash.com/photo-1594892185343-0241e1d47d15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
-        "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        "https://images.unsplash.com/photo-1636955669242-11b90050e9ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHNvZnR3YXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
-    ]
+    const currentProject = projects[0]
+    // console.log(currentProject)
+
+    // const slides = [
+    //     "https://images.unsplash.com/photo-1597239450996-ea7c2c564412?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+    //     "https://images.unsplash.com/photo-1594892185343-0241e1d47d15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
+    //     "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    //     "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    //     "https://images.unsplash.com/photo-1636955669242-11b90050e9ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHNvZnR3YXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
+    // ]
+
+    const slides = currentProject.pictures
+
+
     return (
         <div>
             <section className='fixed inset-0 bg-black opacity-25 z-50'></section>
@@ -26,28 +35,39 @@ export const ProjectModal = ({ setShowProjectModal }) => {
                             <p className='font-semibold text-2xl mb-4 border-b-2 pb-1'>Project Details</p>
                             <div className="flex gap-2 mb-2">
                                 <p className='font-semibold'>Name:</p>
-                                <p className='font-light t'>DivSco EMS Application</p>
+                                <p className='font-light t'>{currentProject.name ?? currentProject.name}</p>
                             </div>
                             <div className="flex gap-2 mb-2">
                                 <p className='font-semibold'>Category:</p>
-                                <p className='font-light t'>Employee Management Software</p>
+                                <p className='font-light t'> {currentProject.category} </p>
                             </div>
                             <div className="flex gap-2 mb-2">
                                 <p className='font-semibold'>Client:</p>
-                                <p className='font-light t'>BadPeople LLC</p>
+                                <p className='font-light t'>{ currentProject.client }</p>
                             </div>
 
                             <div className="flex gap-2 mb-2">
                                 <p className='font-semibold'>Live URL:</p>
-                                <Link to={"https://heroku.com"} target="_blank" className='font-light text-sm text-blue-700'>www.heroku.com</Link>
+                                <Link to={currentProject.live_url} target="_blank" className='font-light text-sm text-blue-700'>
+                                    {currentProject.live_url}
+                                </Link>
                             </div>
                             <div className="flex gap-2 mb-2">
                                 <p className='font-semibold'>Code:</p>
-                                <Link to={"https://github.com"} target="_blank" className='font-light text-sm text-blue-700'>www.github.com</Link>
+                                <Link to={currentProject.code_url} target="_blank" className='font-light text-sm text-blue-700'>
+                                    {currentProject.code_url}
+                                </Link>
+                            </div>
+                            <div className="flex gap-2 mb-2">
+                                {currentProject.stack.map((language) => (
+                                    <div className='rounded-full px-3 text-xs bg-slate-200 shadow-sm'> {language} </div>
+                                ))}
                             </div>
 
 
-                            <p className='font-light text-justify mt-8'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugit enim hic labore eius quaerat nam a neque, corporis et. Ex fugit magni quasi quia excepturi, recusandae earum. Nisi, dolores?</p>
+                            <p className='font-light text-justify mt-8'>
+                                {currentProject.more_info}
+                            </p>
                         </div>
                     </div>
 
@@ -79,7 +99,7 @@ export const Carousel = ({ slides }) => {
 
     return (
         <div className='col-span-4 rounded-2xl w-full h-4/5 overflow-hidden relative'>
-            <img src={slides[currentIndex]} alt="Sample Project" className='w-full h-full object-cover' />
+            <img src={slides[currentIndex]} alt="Sample Project" className='w-full h-full object-cover object-center' />
 
             <div className=' absolute inset-0'>
                 <LiveButton />
