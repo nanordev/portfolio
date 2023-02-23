@@ -1,5 +1,7 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Testimonials } from "./Testimonials"
+import { socials } from "./data"
 
 export const Aside = () => {
 
@@ -10,13 +12,13 @@ export const Aside = () => {
 
 
     return (
-        <aside className='aside w-full col-span-3 flex flex-col gap-10 sticky top-0 bottom-0 h-screen'>
+        <aside className='aside w-full col-span-3 flex flex-col gap-10 sticky top-0 h-screen'>
 
             <Testimonials />
 
             <FeaturedArticles image={image} />
 
-            <Socials github_logo={github_logo} twitter_logo={twitter_logo} linkedin_logo={linkedin_logo} />
+            <Socials socials={socials} />
 
         </aside>
     )
@@ -66,44 +68,31 @@ export const FeaturedArticles = ({ image }) => {
     )
 }
 
-export const Socials = ({ linkedin_logo, twitter_logo, github_logo }) => {
+export const Socials = ({ socials }) => {
     return (
         <section>
             <p className='font-semibold mb-3 px-4'>Socials</p>
             <div className='w-full flex justify-center gap-1 flex-wrap'>
-
-                <article className='flex flex-col py-4 px-1  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
-                    <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
-                        <img src={linkedin_logo} alt="" />
-                    </div>
-                    <p className='font-semibold text-xs text-slate-600'>Linkedin</p>
-
-                    <button className='flex items-center bg-white rounded-full px-4 py-1 text-xs  cursor-pointer'>
-                        <p className='whitespace-nowrap font-semibold'>Follow Me</p>
-                    </button>
-                </article>
-                <article className='flex flex-col py-4 px-1  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
-                    <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
-                        <img src={twitter_logo} alt="" />
-                    </div>
-                    <p className='font-semibold text-xs text-slate-600'>Twitter</p>
-
-                    <button className='flex items-center bg-white rounded-full px-4 py-1 text-xs  cursor-pointer'>
-                        <p className='whitespace-nowrap font-semibold'>Follow Me</p>
-                    </button>
-                </article>
-                <article className='flex flex-col py-4 px-1  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
-                    <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
-                        <img src={github_logo} alt="" />
-                    </div>
-                    <p className='font-semibold text-xs text-slate-600'>Github</p>
-
-                    <button className='flex items-center bg-white rounded-full px-4 py-1 text-xs  cursor-pointer'>
-                        <p className='whitespace-nowrap font-semibold'>Follow Me</p>
-                    </button>
-                </article>
-
+                {socials.map((social) => (
+                    <SocialButton social={social} />
+                ))}
             </div>
         </section>
+    )
+}
+
+export const SocialButton = ({ social }) => {
+    const { image, name, link } = social
+    return (
+        <article className='flex flex-col py-4 px-1  justify-center gap-2 items-center bg-zinc-100 rounded-2xl'>
+            <div className="rounded-full overflow-hidden w-14 h-14 bg-white object-contain shrink-0">
+                <img src={image} alt="" />
+            </div>
+            <p className='font-semibold text-xs text-slate-600'>{name}</p>
+
+            <Link to={link} className='flex items-center bg-white rounded-full px-4 py-1 text-xs  cursor-pointer'>
+                <p className='whitespace-nowrap font-semibold'>Follow Me</p>
+            </Link>
+        </article>
     )
 }

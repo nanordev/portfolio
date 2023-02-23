@@ -23,3 +23,26 @@ export const projects = [
         // ]
     },
 ]
+
+export const socials = [
+    {
+        name: "Instagram",
+        link: "https://instagram.com/fiineboy",
+        image: "/images/gid-1.png"
+    },
+    {
+        name: "LinkedIn",
+        link: "https://instagram.com/fiineboy",
+        image: "https://th.bing.com/th/id/R.d51da72e1f4675ba5aef9c956ed4c562?rik=dDahhQdCwoAv3w&pid=ImgRaw&r=0"
+    },
+    {
+        name: "Twitter",
+        link: "https://twitter.com/fiineboy_",
+        image: "https://th.bing.com/th/id/R.3d74e8bfd4ef7985f7529bb9f7650eca?rik=RCvdo0dDvjxCWg&riu=http%3a%2f%2fwww.stickpng.com%2fassets%2fimages%2f580b57fcd9996e24bc43c53e.png&ehk=%2fkYf7%2bIY6TUkpUQzwclpivMLQ8ynEgcZYehDGOzbu0E%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        name: "Github",
+        link: "https://github.com/fineboyy",
+        image: "https://logodix.com/logo/1205247.png"
+    },
+]
