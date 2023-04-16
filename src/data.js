@@ -14,13 +14,6 @@ export const projects = [
             "/images/foodgasm-3.png",
             "/images/foodgasm-4.png",
         ]
-        // pictures: [
-        //     "https://images.unsplash.com/photo-1597239450996-ea7c2c564412?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        //     "https://images.unsplash.com/photo-1594892185343-0241e1d47d15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
-        //     "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        //     "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-        //     "https://images.unsplash.com/photo-1636955669242-11b90050e9ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHNvZnR3YXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
-        // ]
     },
 ]
 
@@ -45,4 +38,17 @@ export const socials = [
         link: "https://github.com/fineboyy",
         image: "https://logodix.com/logo/1205247.png"
     },
+]
+
+export const stats = [
+    {value: "2+", title: "Years Experience"},
+    {value: "10+", title: "Projects"},
+    {value: "5+", title: "Collaborations"},
+    {value: "5+", title: "Happy Clients"},
+]
+
+export const about = [
+    "I am Michael Amponsah, a full stack web and mobile developer. I live in Kumasi, Ghana.",
+    "I love to build things, especially useful ones.",
+    `Currently working as a <span>frontend web developer</span> with <span class="text-insta-solid"> <a href="https://trinitysoftwarecenter.com">Trinity Software Center</a> </span>, a software development firm based in Kumasi.`,
 ]

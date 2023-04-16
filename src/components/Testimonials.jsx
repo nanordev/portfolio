@@ -17,9 +17,9 @@ export const Testimonials = () => {
                 <Avatar image={image} />
             <Avatar image={image} /> */}
 
-                {length.map(() => (
-                    <Avatar image={image} />
-                ))}
+                {/* {length.map(() => (
+                    // <Avatar image={image} />
+                ))} */}
 
             </div>
     )
@@ -27,14 +27,14 @@ export const Testimonials = () => {
 
 
 
-export const Avatar = ({ image }) => {
-    return (
-        <div className="avatar rounded-full w-16 h-16 shrink-0 bg-insta-new-gradient flex items-center justify-center cursor-pointer">
-            <div className="overflow-hidden rounded-full white-circle shrink-0 bg-white flex items-center justify-center">
-                <div className="image-wrapper overflow-hidden w-14 h-14 w rounded-full object-cover">
-                    <img src={image} alt="profile of Michael Amponsah" />
-                </div>
-            </div>
-        </div>
-    )
-}
+// export const Avatar = ({ image }) => {
+//     return (
+//         <div className="avatar rounded-full w-16 h-16 shrink-0 bg-insta-new-gradient flex items-center justify-center cursor-pointer">
+//             <div className="overflow-hidden rounded-full white-circle shrink-0 bg-white flex items-center justify-center">
+//                 <div className="image-wrapper overflow-hidden w-14 h-14 w rounded-full object-cover">
+//                     <img src={image} alt="profile of Michael Amponsah" />
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }

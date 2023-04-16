@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { Testimonials } from "./Testimonials"
+import { Testimonials } from "./components/Testimonials"
 import { socials } from "./data"
 
 export const Aside = () => {
@@ -39,7 +39,7 @@ export const FeaturedArticles = ({ image }) => {
                         <p>Meet Michael Amponsah, the graduate making waves in Ghana at age 22</p>
                         <button className='flex items-center text-slate-500 cursor-pointer'>
                             <span>Read More</span>
-                            <span className="material-symbols-outlined">
+                            <span className="material-symbols-rounded">
                                 chevron_right
                             </span>
                         </button>
@@ -54,7 +54,7 @@ export const FeaturedArticles = ({ image }) => {
                         <p>Meet Michael Amponsah, the graduate making waves in Ghana at age 22</p>
                         <button className='flex items-center text-slate-500 cursor-pointer'>
                             <span>Read More</span>
-                            <span className="material-symbols-outlined">
+                            <span className="material-symbols-rounded">
                                 chevron_right
                             </span>
                         </button>

@@ -1,20 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import { projects } from './data'
+import { projects } from '../data'
 
 export const ProjectModal = ({ setShowProjectModal }) => {
 
     const currentProject = projects[0]
-    // console.log(currentProject)
-
-    // const slides = [
-    //     "https://images.unsplash.com/photo-1597239450996-ea7c2c564412?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    //     "https://images.unsplash.com/photo-1594892185343-0241e1d47d15?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80",
-    //     "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    //     "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    //     "https://images.unsplash.com/photo-1636955669242-11b90050e9ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fHNvZnR3YXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60"
-    // ]
 
     const slides = currentProject.pictures
 
@@ -24,7 +15,7 @@ export const ProjectModal = ({ setShowProjectModal }) => {
             <section className='fixed inset-0 bg-black opacity-25 z-50'></section>
             <section className='fixed inset-0 flex items-center justify-center z-50'>
                 <div className='w-4/5 h-5/6 bg-white rounded-3xl p-8 relative'>
-                    <span className="material-symbols-outlined absolute top-3 right-3 cursor-pointer hover:rotate-45 duration-100"onClick={() => setShowProjectModal(false)}>
+                    <span className="material-symbols-rounded absolute top-3 right-3 cursor-pointer hover:rotate-45 duration-100"onClick={() => setShowProjectModal(false)}>
                         close
                     </span>
 
@@ -48,7 +39,7 @@ export const ProjectModal = ({ setShowProjectModal }) => {
 
                             <div className="flex gap-2 mb-2">
                                 <p className='font-semibold'>Live URL:</p>
-                                <Link to={currentProject.live_url} target="_blank" className='font-light text-sm text-blue-700'>
+                                <Link to={"https://" + currentProject.live_url} target="_blank" className='font-light text-sm text-blue-700'>
                                     {currentProject.live_url}
                                 </Link>
                             </div>
@@ -118,7 +109,7 @@ export const CarouselButton = ({ direction, arrow, callback }) => {
     const rightClasses = 'back-button absolute top-1/2 right-2 cursor-pointer p-2 bg-black opacity-50 hover:opacity-100 transition duration-150 rounded-full flex items-center justify-center -translate-y-1/2'
     return (
         <div className={direction === "left" ? leftClasses : rightClasses} onClick={callback} >
-            <span className="material-symbols-outlined text-white">
+            <span className="material-symbols-rounded text-white">
                 {arrow}
             </span>
         </div>
