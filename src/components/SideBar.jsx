@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const links = [
     { to: "", icon: "home" },
-    { to: "portfolio", icon: "deployed_code" },
+    { to: "portfolio", icon: "data_object" },
     { to: "resume", icon: "description" },
     { to: "contact", icon: "mail" },
 ]

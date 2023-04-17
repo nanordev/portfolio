@@ -1,10 +1,10 @@
 export const projects = [
     {
-        name: "Get it done",
-        category: "Utility App",
+        name: "FoodGasm",
+        category: "Food Ordering App",
         status: "live",
         code_url: "https://github.com/fineboyy",
-        live_url: "bit.ly/36y4sBY",
+        live_url: "https://bit.ly/36y4sBY",
         client: "John Doe LLC",
         more_info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugit enim hic labore eius quaerat nam a neque, corporis et. Ex fugit magni quasi quia excepturi, recusandae earum. Nisi, dolores?",
         stack: ["Javascript", "HTML", "CSS"],
@@ -13,6 +13,41 @@ export const projects = [
             "/images/foodgasm-2.png",
             "/images/foodgasm-3.png",
             "/images/foodgasm-4.png",
+        ]
+    },
+    {
+        name: "DivCo HRMS",
+        category: "HR Management System",
+        status: "live",
+        code_url: "https://github.com/nanordev/ems_app_client",
+        live_url: "https://ems-app-client.vercel.app/",
+        client: "John Doe LLC",
+        more_info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugit enim hic labore eius quaerat nam a neque, corporis et. Ex fugit magni quasi quia excepturi, recusandae earum. Nisi, dolores?",
+        stack: ["React", "NodeJs", "Express", "MongoDB"],
+        pictures: [
+            // "/images/ems_app_1.png",
+            "/images/ems_app_2.png",
+            "/images/ems_app_3.png",
+            // "/images/ems_app_4.png",
+            "/images/ems_app_5.png",
+            // "/images/ems_app_6.png",
+            "/images/ems_app_7.png",
+        ]
+    },
+    {
+        name: "Get it Done",
+        category: "Todo List Application",
+        status: "live",
+        code_url: "https://github.com/nanordev/ems_app_client",
+        live_url: "https://heuristic-gates-f8d33f.netlify.app/",
+        client: "Personal Project",
+        more_info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus fugit enim hic labore eius quaerat nam a neque, corporis et. Ex fugit magni quasi quia excepturi, recusandae earum. Nisi, dolores?",
+        stack: ["HTML", "SCSS", "Javascript"],
+        pictures: [
+            "/images/get_it_done_1.png",
+            "/images/get_it_done_2.png",
+            "/images/get_it_done_3.png",
+            "/images/get_it_done_4.png",
         ]
     },
 ]
@@ -52,3 +87,6 @@ export const about = [
     "I love to build things, especially useful ones.",
     `Currently working as a <span>frontend web developer</span> with <span class="text-insta-solid"> <a href="https://trinitysoftwarecenter.com">Trinity Software Center</a> </span>, a software development firm based in Kumasi.`,
 ]
+
+export const profile_image = "https://images.unsplash.com/photo-1525665363629-cdf85a703b50?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=327&q=80"
+
